@@ -437,32 +437,32 @@
 
   // Ticket form submission (Formspree-ready)
   var form = document.getElementById('ticketForm');
-  var status = document.getElementById('ticket-status');
+  var statusEl = document.getElementById('ticket-status');
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var endpoint = form.getAttribute('data-endpoint');
     if(!endpoint){
-      status.textContent = 'Form not connected yet — see the setup notes below the page.';
-      status.style.color = '#D64545';
+      statusEl.textContent = 'Form not connected yet — see the setup notes below the page.';
+      statusEl.style.color = '#D64545';
       return;
     }
-    status.textContent = 'Sending…';
+    statusEl.textContent = 'Sending…';
     fetch(endpoint, {
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     }).then(function(res){
       if(res.ok){
-        status.textContent = 'Ticket sent. We\'ll get back to you soon.';
-        status.style.color = '#4CAF63';
+        statusEl.textContent = 'Ticket sent. We\'ll get back to you soon.';
+        statusEl.style.color = '#4CAF63';
         form.reset();
       } else {
-        status.textContent = 'Something went wrong — please try again.';
-        status.style.color = '#D64545';
+        statusEl.textContent = 'Something went wrong — please try again.';
+        statusEl.style.color = '#D64545';
       }
     }).catch(function(){
-      status.textContent = 'Network error — please try again.';
-      status.style.color = '#D64545';
+      statusEl.textContent = 'Network error — please try again.';
+      statusEl.style.color = '#D64545';
     });
   });
 </script>
