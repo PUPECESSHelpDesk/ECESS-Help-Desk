@@ -9,20 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-pcb: #0F2A1F;
-    --bg-pcb-deep: #0A1F17;
-    --panel: #F5F1E6;
-    --panel-alt: #EDE7D6;
-    --ink: #1B2B22;
-    --ink-soft: #4A5A50;
-    --ink-light: #F5F1E6;
-    --gold: #C9A227;
-    --gold-bright: #E4C24A;
-    --maroon: #7A0019;
+    --bg-pcb: #0B2F73;
+    --bg-pcb-deep: #061B45;
+    --panel: #F5F6F8;
+    --panel-alt: #E9EDF6;
+    --ink: #14213D;
+    --ink-soft: #4B5875;
+    --ink-light: #F5F6F8;
+    --gold: #1B3F91;
+    --gold-bright: #3E6FD9;
+    --maroon: #14213D;
     --led-green: #4CAF63;
     --led-amber: #E8A33D;
     --led-red: #D64545;
-    --trace: rgba(201,162,39,0.35);
+    --trace: rgba(27,63,145,0.35);
     --radius: 3px;
     --mono: 'Space Mono', monospace;
     --sans: 'Inter', sans-serif;
@@ -78,7 +78,7 @@
     border-radius:50%;
     background:var(--gold);
   }
-  section{position:relative; padding:56px 0 56px 28px;}
+  section{position:relative; padding:56px 0 56px 48px;}
   section h2{
     font-family:var(--mono);
     text-transform:uppercase;
@@ -147,7 +147,7 @@
     transition:transform 0.12s ease, background 0.15s ease;
   }
   .btn:hover{transform:translateY(-1px);}
-  .btn-primary{background:var(--gold); color:var(--bg-pcb-deep); font-weight:700;}
+  .btn-primary{background:var(--gold-bright); color:var(--ink-light); font-weight:700;}
   .btn-primary:hover{background:var(--gold-bright);}
   .btn-ghost{border-color:rgba(245,241,230,0.4); color:var(--ink-light);}
   .btn-ghost:hover{border-color:var(--gold-bright); color:var(--gold-bright);}
@@ -258,7 +258,7 @@
     .rail{padding-left:16px;}
     .rail::before{left:16px;}
     .via{left:6px;}
-    section{padding-left:20px;}
+    section{padding-left:36px;}
   }
 </style>
 </head>
@@ -266,12 +266,12 @@
 
 <header class="hero">
   <svg class="traces" viewBox="0 0 900 400" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 60 H300 L340 100 H900" stroke="#C9A227" stroke-width="1" fill="none" opacity="0.3"/>
-    <path d="M0 180 H150 L190 220 H600 L640 260 H900" stroke="#C9A227" stroke-width="1" fill="none" opacity="0.25"/>
-    <path d="M0 320 H250 L280 350 H900" stroke="#C9A227" stroke-width="1" fill="none" opacity="0.2"/>
-    <circle cx="300" cy="60" r="3" fill="#E4C24A" opacity="0.6"/>
-    <circle cx="190" cy="220" r="3" fill="#E4C24A" opacity="0.5"/>
-    <circle cx="280" cy="350" r="3" fill="#E4C24A" opacity="0.4"/>
+    <path d="M0 60 H300 L340 100 H900" stroke="#3E6FD9" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M0 180 H150 L190 220 H600 L640 260 H900" stroke="#3E6FD9" stroke-width="1" fill="none" opacity="0.25"/>
+    <path d="M0 320 H250 L280 350 H900" stroke="#3E6FD9" stroke-width="1" fill="none" opacity="0.2"/>
+    <circle cx="300" cy="60" r="3" fill="#6E9AF0" opacity="0.6"/>
+    <circle cx="190" cy="220" r="3" fill="#6E9AF0" opacity="0.5"/>
+    <circle cx="280" cy="350" r="3" fill="#6E9AF0" opacity="0.4"/>
   </svg>
   <div class="hero-inner">
     <div class="eyebrow"><span class="dot"></span>SYSTEM ONLINE &mdash; ECESS HELP DESK</div>
